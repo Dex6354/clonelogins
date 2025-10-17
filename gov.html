@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Gov.br (Simulado)</title>
+    <!-- Carrega Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'gov-blue': '#0058b7',
+                        'gov-gray': '#e9e9e9',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .login-card {
+            /* Design limpo e sem sombras fortes, característico do Gov.br */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            max-width: 400px;
+        }
+        .btn-gov {
+            background-color: #0058b7;
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .btn-gov:hover {
+            background-color: #004a9e;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="login-card w-full bg-white">
+        <!-- Cabeçalho Gov.br -->
+        <div class="bg-gov-blue p-4 text-center">
+            <!-- Logo Gov.br simplificado -->
+            <div class="text-white text-3xl font-bold">gov.br</div>
+        </div>
+        
+        <div class="p-8 space-y-6">
+            <h2 class="text-xl font-semibold text-center text-gray-800">Identifique-se para acessar o gov.br</h2>
+            
+            <form onsubmit="return false;" class="space-y-4">
+                <input type="text" placeholder="Digite seu CPF" class="w-full px-4 py-3 border border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-gov-blue transition duration-150" inputmode="numeric">
+                
+                <button type="submit" class="btn-gov w-full">
+                    Continuar
+                </button>
+            </form>
+
+            <div class="text-center pt-4">
+                <a href="#" class="text-gov-blue hover:underline text-sm font-medium">Esqueci minha senha</a>
+            </div>
+
+            <div class="text-center pt-4 border-t border-gov-gray">
+                <p class="text-sm text-gray-600 mb-3">
+                    Primeiro acesso? 
+                </p>
+                <button class="bg-gov-gray text-gov-blue font-semibold px-4 py-2 rounded-md hover:bg-gray-300 transition duration-150 border border-gov-blue">
+                    Crie sua conta gov.br
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
