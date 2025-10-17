@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Facebook (Simulado)</title>
+    <!-- Carrega Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'fb-blue': '#1877f2',
+                        'fb-gray': '#f0f2f5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Fundo cinza claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 16px; /* Padding top/bottom para simular o layout */
+            min-height: 100vh;
+        }
+        .login-card {
+            /* Estilo que imita o cartão do Facebook */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+            border-radius: 8px;
+            max-width: 396px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="w-full max-w-6xl flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-16">
+                    
+        <!-- Lado Esquerdo (Texto) -->
+        <div class="md:w-1/2 text-center md:text-left">
+            <h1 class="text-5xl font-bold text-fb-blue mb-4">facebook</h1>
+            <p class="text-3xl text-gray-900 max-w-md">O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</p>
+        </div>
+
+        <!-- Lado Direito (Formulário) -->
+        <div class="md:w-1/2 flex justify-center md:justify-start">
+            <div class="login-card w-full max-w-sm bg-white p-4 space-y-3 shadow-xl">
+                <form onsubmit="return false;" class="space-y-3">
+                    <input type="email" placeholder="Email ou telefone" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-fb-blue transition duration-150 text-base">
+                    <input type="password" placeholder="Senha" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-fb-blue transition duration-150 text-base">
+                    
+                    <button type="submit" class="w-full bg-fb-blue text-white font-bold text-xl py-2.5 rounded-md hover:bg-blue-600 transition duration-150 shadow-md">
+                        Entrar
+                    </button>
+                </form>
+                
+                <div class="text-center pt-2 pb-3">
+                    <a href="#" class="text-fb-blue hover:underline text-sm">Esqueceu a senha?</a>
+                </div>
+
+                <div class="border-t border-gray-200 pt-5">
+                    <button class="bg-green-500 text-white font-bold px-4 py-3 rounded-md hover:bg-green-600 transition duration-150 text-lg shadow-md block mx-auto">
+                        Criar nova conta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
