@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Google (Simulado)</title>
+    <!-- Carrega Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'google-blue': '#1a73e8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .login-card {
+            /* Estilo que imita o cartão do Google */
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06), 0 2px 5px 0 rgba(0,0,0,0.2);
+            border-radius: 8px;
+            max-width: 450px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="login-card w-full border border-gray-300 bg-white p-10 md:p-12">
+        <div class="text-center mb-6">
+            <!-- Simulação do Logo Google -->
+            <div class="text-3xl font-normal text-google-blue tracking-tighter">
+                 G<span class="text-red-500">o</span><span class="text-yellow-500">o</span><span class="text-google-blue">g</span><span class="text-green-500">l</span><span class="text-red-500">e</span>
+            </div>
+        </div>
+        <h2 class="text-2xl mb-2 text-gray-900 text-center">Fazer login</h2>
+        <p class="text-gray-600 mb-8 text-center">Use sua Conta do Google</p>
+        
+        <form onsubmit="return false;" class="space-y-6">
+            <input type="email" placeholder="E-mail ou Telefone" class="w-full px-4 py-3 border border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-google-blue transition duration-150">
+            
+            <div class="text-sm">
+                <a href="#" class="text-google-blue hover:underline font-medium">Esqueceu seu e-mail?</a>
+            </div>
+            
+            <p class="text-sm text-gray-600">
+                Não é seu computador? Use uma janela de navegação privada para fazer login.
+                <a href="#" class="text-google-blue hover:underline font-medium">Saiba mais</a>
+            </p>
+            
+            <div class="flex justify-between items-center pt-4">
+                <a href="#" class="text-google-blue hover:underline font-medium">Criar conta</a>
+                <button type="submit" class="bg-google-blue text-white font-medium px-6 py-2 rounded-md hover:bg-blue-700 transition duration-150 shadow-md">
+                    Próxima
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
