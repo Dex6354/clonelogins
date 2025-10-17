@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login da Microsoft (Simulado)</title>
+    <!-- Carrega Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'ms-blue': '#0067b8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .login-card {
+            /* Estilo que imita o cartão da Microsoft */
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06), 0 2px 5px 0 rgba(0,0,0,0.2);
+            border-radius: 4px; /* Microsoft costuma usar cantos menos arredondados */
+            max-width: 450px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="login-card w-full bg-white p-8 md:p-12 border border-gray-300">
+        <!-- Simulação do Logo Microsoft -->
+        <div class="flex items-center space-x-2 mb-8">
+            <div class="w-4 h-4 grid grid-cols-2 gap-0.5">
+                <div class="bg-red-500"></div>
+                <div class="bg-green-500"></div>
+                <div class="bg-blue-500"></div>
+                <div class="bg-yellow-500"></div>
+            </div>
+            <span class="text-3xl text-gray-800">Microsoft</span>
+        </div>
+
+        <h2 class="text-2xl font-semibold mb-6 text-gray-900">Entrar</h2>
+        
+        <form onsubmit="return false;" class="space-y-6">
+            <input type="email" placeholder="E-mail, telefone ou Skype" class="w-full px-3 py-2 border border-gray-400 rounded-sm focus:outline-none focus:border-black focus:ring-0 transition duration-150">
+            
+            <div class="text-sm">
+                <a href="#" class="text-ms-blue hover:underline font-medium">Não tem uma conta? Crie uma!</a>
+            </div>
+
+            <div class="text-sm pt-4">
+                <a href="#" class="text-ms-blue hover:underline font-medium">Entrar com uma chave de segurança</a>
+            </div>
+            
+            <div class="flex justify-end pt-8">
+                <button type="submit" class="bg-ms-blue text-white font-medium px-4 py-2 rounded-sm hover:bg-blue-800 transition duration-150 shadow-md">
+                    Próximo
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
