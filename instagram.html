@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Instagram (Simulado)</title>
+    <!-- Carrega Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'ig-blue': '#0095f6',
+                        'ig-link': '#00376b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa; /* Fundo bem claro, característico do IG */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .login-card {
+            /* Design focado no centro, estilo móvel */
+            border: 1px solid #dbdbdb;
+            border-radius: 1px; /* Instagram usa bordas bem sutis/retas */
+            max-width: 350px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="w-full max-w-sm flex flex-col space-y-4">
+        
+        <!-- Cartão de Login Principal -->
+        <div class="login-card w-full bg-white p-10 space-y-6">
+            
+            <div class="text-center">
+                <!-- Simulação do Logo Instagram (usando a fonte principal) -->
+                <h1 class="text-4xl font-serif mt-4 mb-6" style="font-family: 'Billabong', cursive;">Instagram</h1>
+            </div>
+
+            <form onsubmit="return false;" class="space-y-2">
+                <input type="text" placeholder="Telefone, nome de usuário ou email" class="w-full px-3 py-2 border border-gray-300 bg-gray-50 text-sm rounded-sm focus:outline-none focus:border-gray-500">
+                <input type="password" placeholder="Senha" class="w-full px-3 py-2 border border-gray-300 bg-gray-50 text-sm rounded-sm focus:outline-none focus:border-gray-500">
+                
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-ig-blue text-white font-semibold py-1.5 text-sm rounded-md opacity-50 cursor-not-allowed">
+                        Entrar
+                    </button>
+                </div>
+            </form>
+
+            <div class="flex items-center space-x-2 pt-2">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <div class="text-sm font-semibold text-gray-500">OU</div>
+                <div class="flex-grow border-t border-gray-300"></div>
+            </div>
+
+            <!-- Login com Facebook -->
+            <div class="text-center">
+                <a href="#" class="text-fb-blue text-sm font-semibold flex items-center justify-center space-x-1">
+                    <!-- Icone FB (Simulado) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.324H9.088v5.625c3.823-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                    <span>Entrar com o Facebook</span>
+                </a>
+            </div>
+
+            <div class="text-center pt-2">
+                <a href="#" class="text-ig-link text-xs">Esqueceu a senha?</a>
+            </div>
+            
+        </div>
+        
+        <!-- Cartão de Criação de Conta -->
+        <div class="login-card w-full bg-white p-4 text-center text-sm">
+            Não tem uma conta? 
+            <a href="#" class="text-ig-blue font-semibold">Cadastre-se</a>
+        </div>
+        
+    </div>
+
+</body>
+</html>
